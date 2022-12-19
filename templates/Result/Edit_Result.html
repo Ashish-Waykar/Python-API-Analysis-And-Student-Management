@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block content %}
+<br />
+<div class="container">
+    <div class="col-12">
+
+      <form class="" action="" method="post" style="padding: 30px" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <tr>
+          <th><label for="id_s_name">Student Name:</label></th>
+          <td>
+            <input type="text" name="name" value="{{result.name}}" maxlength="200" placeholder="{{stu.s_name}}"
+              class="form-control" id="id_name" />
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="id_branch">Branch:</label></th>
+          <td>
+            <input type="text" name="branch" value="{{result.branch}}" maxlength="200" placeholder="Branch Name"
+              class="form-control" id="id_branch" />
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="id_year">Year:</label></th>
+          <td>
+            <input type="text" name="year" maxlength="200" value="{{result.year}}" class="form-control" id="id_year" />
+          </td>
+        </tr>
+
+
+
+        <tr>
+          <th><label for="id_s_marksheet">Result:</label></th>
+          <td>
+            <input type="file" name="s_marksheet" class="form-control" required id="id_s_marksheet" />
+          </td>
+        </tr>
+        <br />
+
+        <input type="submit" name="submit" value="Update" class="btn btn-outline-info" />
+      </form>
+
+
+    </div>
+<div class="col-12">
+  <div class="row">
+    <div class="col-6">
+
+          Name : {{result.name}}<br>
+          Branch : {{result.branch}}<br>
+          Year : {{result.year}}<br>
+          Email : {{result.reg_no.mail}}<br>
+
+    </div>
+    <div class="col-6">
+
+      <img width="100%"height="auto"src="{{result.s_marksheet.url}}" alt="">
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+</div>
+
+{% endblock content %}

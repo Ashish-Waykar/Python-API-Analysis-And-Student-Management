@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<form class="" action="" method="post" style="padding: 30px">
+    {% csrf_token %} <label>Select Mess Fees State</label> {{create.mess}} <br />
+
+    <label>Name</label> {{create.s_name}} <br />
+    <label>Branch</label> {{create.branch}} <br />
+    <label>Year</label> {{create.year}} <br />
+    <label>Mail</label> {{create.mail}} <br />
+    <label>Mobile</label> {{create.mobile}} <br />
+
+    <input type="submit" name="submit" value="Create" class="btn btn-info" />
+</form>
+{% endblock %}

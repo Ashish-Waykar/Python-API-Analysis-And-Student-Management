@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block content %}
+<br />
+<div class="container">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+
+                <h1>All Students Are Here</h1>
+                {% for p in results %}
+
+                <div class="card" style="border: 1px solid black; padding: 20px">
+                    Roll :{{p.reg_no}} <br />
+                    Name :{{p.name}} <br />
+                    Branch :{{p.branch}} <br />
+                    Year : {{p.year}} <br />
+                    Mail :{{p.s_marksheet}} <br />
+
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-6">
+
+                        </div>
+                        <div class="col-6">
+                          <a href="{% url 'edit_result' p.id %}" class="btn btn-outline-info" style="margin: 5px">
+                              Edit/Add Result
+                          </a>
+                          <a href="" class="btn btn-outline-danger" style="margin: 5px">
+                              Delete Marksheet
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <br />
+                </div>
+                <br />
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

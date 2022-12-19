@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+<br />
+<div class="container">
+    <div class="col-12">
+
+      <form class="" action="{% url 'edit_stu' stu.s_roll %}" method="post" style="padding: 30px">
+
+        {% csrf_token %}
+
+        <tr>
+          <th><label for="id_s_name">Student Name:</label></th>
+          <td>
+            <input type="text" name="s_name" value="{{stu.s_name}}" maxlength="200" placeholder="{{stu.s_name}}"
+              class="form-control" id="id_s_name" />
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="id_branch">Branch:</label></th>
+          <td>
+            <input type="text" name="branch" value="{{stu.branch}}" maxlength="200" placeholder="Branch Name"
+              class="form-control" id="id_branch" />
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="id_year">Year:</label></th>
+          <td>
+            <input type="text" name="year" maxlength="200" value="{{stu.year}}" class="form-control" id="id_year" />
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="id_mail">Mail:</label></th>
+          <td>
+            <input type="mail" name="mail" value="{{stu.mail}}" maxlength="254" class="form-control" id="id_mail" />
+          </td>
+        </tr>
+
+        <tr>
+          <th><label for="id_mobile">Mobile:</label></th>
+          <td>
+            <input type="number" name="mobile" value="{{stu.mobile}}" class="form-control" required id="id_mobile" />
+          </td>
+        </tr>
+        <br />
+
+        <input type="submit" name="submit" value="Update" class="btn btn-outline-info" />
+      </form>
+    </div>
+</div>
+
+{% endblock content %}
