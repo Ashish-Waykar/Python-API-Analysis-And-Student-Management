@@ -1,0 +1,51 @@
+[
+    {
+        "Name": "New Delhi South Ext-II",
+        "State": "Delhi",
+        "Country": "India",
+        "Pincode": "110049"
+    },
+    {
+        "Name": "Amravati",
+        "State": "Delhi",
+        "Country": "India",
+        "Pincode": "1100499"
+    },
+    {
+        "Name": "Nanded",
+        "State": "Maharashtra",
+        "Country": "India",
+        "Pincode": "110048"
+    },
+    {
+        "Name": "Pune",
+        "State": "Maharashtra",
+        "Country": "India",
+        "Pincode": "4404604"
+    },
+    {
+        "Name": "MUMBAI",
+        "State": "Maharashtra",
+        "Country": "India",
+        "Pincode": "4404001"
+    },
+    {
+        "Name": "Indore",
+        "State": "Maharashtra",
+        "Country": "India",
+        "Pincode": "4404008"
+    },
+    {
+        "Name": "Nagpur",
+        "State": "Maharashtra",
+        "Country": "India",
+        "Pincode": "4404003"
+    },
+    {
+        "Name": "hydrabaad",
+        "State": "Maharashtra",
+        "Country": "India",
+        "Pincode": "4404004"
+    }
+
+]
